@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _passwordController,
-                labelText: 'Email',
+                labelText: 'Password',
                 icon: Icons.lock,
               ),
             ),
