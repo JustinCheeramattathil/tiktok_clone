@@ -17,6 +17,7 @@ class AuthController extends GetxController {
 
   File? get profilePhoto => _pickedImage.value;
 
+  @override
   void onReady() {
     super.onReady();
     _user = Rx<User?>(firebaseAuth.currentUser);
