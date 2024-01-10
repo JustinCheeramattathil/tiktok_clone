@@ -7,6 +7,8 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+       
+    
     }
 }
 
@@ -14,6 +16,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" } 
     }
 }
 

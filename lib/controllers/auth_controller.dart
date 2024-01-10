@@ -16,7 +16,7 @@ class AuthController extends GetxController {
   late Rx<File?> _pickedImage;
 
   File? get profilePhoto => _pickedImage.value;
-
+  User get user => _user.value!;
   @override
   void onReady() {
     super.onReady();
@@ -28,7 +28,7 @@ class AuthController extends GetxController {
   _setInitialScreen(User? user) {
     if (user == null) {
       Get.offAll(() => LoginScreen());
-    }else{
+    } else {
       Get.offAll(() => const HomeScreen());
     }
   }
@@ -114,5 +114,9 @@ class AuthController extends GetxController {
         e.toString(),
       );
     }
+  }
+
+  signOut() async {
+    await firebaseAuth.signOut();
   }
 }
